@@ -23,7 +23,15 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        manualChunks: undefined
+        assetFileNames: (assetInfo) => {
+          // Preserve the original asset directory structure
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+            return `src/assets/logos/[name][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        }
       }
     }
   },

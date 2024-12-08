@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #ff5722;
+  --text-color: #ffffff;
+  --background-color: #000000;
+  --card-background: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Mobile font size adjustments */
+/* @media screen and (max-width: 768px) {
+  h1 {
+    font-size: calc(2.5rem * 0.85) !important;
+  }
+
+  h2 {
+    font-size: calc(2rem * 0.85) !important;
+  }
+
+  h3 {
+    font-size: calc(1.5rem * 0.85) !important;
+  }
+
+  p, a, button, li {
+    font-size: calc(1rem * 0.9) !important;
+  }
+
+  .section-title {
+    font-size: calc(2.5rem * 0.85) !important;
+  }
+
+  .section-subtitle {
+    font-size: calc(1.2rem * 0.85) !important;
+  }
+
+  .card-title {
+    font-size: calc(1.5rem * 0.85) !important;
+  }
+
+  .card-text {
+    font-size: calc(1rem * 0.9) !important;
+  }
+
+  .nav-link {
+    font-size: calc(1rem * 0.9) !important;
+  }
+
+  .button-text {
+    font-size: calc(1rem * 0.9) !important;
+  }
+
+  .testimonial-text {
+    font-size: calc(1rem * 0.9) !important;
+  }
+
+  .testimonial-author {
+    font-size: calc(1rem * 0.9) !important;
+  }
+
+  .testimonial-position {
+    font-size: calc(0.9rem * 0.9) !important;
+  }
+
+  .footer-text {
+    font-size: calc(1rem * 0.9) !important;
+  }
+
+  .copyright-text {
+    font-size: calc(0.9rem * 0.9) !important;
+  }
+} */
+
+/* Smaller mobile devices */
+/* @media screen and (max-width: 480px) {
+  h1 {
+    font-size: calc(2.5rem * 0.75) !important;
+  }
+
+  h2 {
+    font-size: calc(2rem * 0.75) !important;
+  }
+
+  h3 {
+    font-size: calc(1.5rem * 0.75) !important;
+  }
+
+  p, a, button, li {
+    font-size: calc(1rem * 0.85) !important;
+  }
+
+  .section-title {
+    font-size: calc(2.5rem * 0.75) !important;
+  }
+
+  .section-subtitle {
+    font-size: calc(1.2rem * 0.75) !important;
+  }
+
+  .card-title {
+    font-size: calc(1.5rem * 0.75) !important;
+  }
+
+  .card-text {
+    font-size: calc(1rem * 0.85) !important;
+  }
+
+  .nav-link {
+    font-size: calc(1rem * 0.85) !important;
+  }
+
+  .button-text {
+    font-size: calc(1rem * 0.85) !important;
+  }
+
+  .testimonial-text {
+    font-size: calc(1rem * 0.85) !important;
+  }
+
+  .testimonial-author {
+    font-size: calc(1rem * 0.85) !important;
+  }
+
+  .testimonial-position {
+    font-size: calc(0.9rem * 0.85) !important;
+  }
+
+  .footer-text {
+    font-size: calc(1rem * 0.85) !important;
+  }
+
+  .copyright-text {
+    font-size: calc(0.9rem * 0.85) !important;
+  }
+} */
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+h1 em {
+  font-style: italic;
+  color: #ff5722;
+}
+
+h1 strong {
+  color: #ff5722;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #999;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+} 

@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-  base: '/landing-page/',
+  base: '/',
   plugins: [
     react({
       jsxImportSource: '@emotion/react',
@@ -16,6 +16,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/src'
+    }
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
     }
   },
   server: {

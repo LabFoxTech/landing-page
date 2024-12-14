@@ -265,7 +265,7 @@ const Contact = () => {
 
   return (
     <>
-      <ClientsSection>
+      <ClientsSection id="portfolio">
         <ClientsTitle>Our Clients</ClientsTitle>
         <ScrollContainer>
           <ScrollTrack
@@ -297,7 +297,7 @@ const Contact = () => {
         </ScrollContainer>
       </ClientsSection>
 
-      <ContactSection>
+      <ContactSection id="contact">
         <ContactCard
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

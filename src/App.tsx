@@ -378,6 +378,14 @@ function App() {
     setIsMobileMenuOpen(false);
   };
 
+  const navLinks = [
+    { href: "./", label: "Home" },
+    { href: "#services", label: "Services" },
+    { href: "#process", label: "Process" },
+    { href: "#portfolio", label: "Portfolio" },
+    { href: "#contact", label: "Contact" }
+  ];
+
   return (
     <AppContainer>
       <Header>
@@ -397,11 +405,9 @@ function App() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 style={{ display: 'flex', gap: '29px' }}
               >
-                <NavLink href="#home">Home</NavLink>
-                <NavLink href="#services">Services</NavLink>
-                <NavLink href="#process">Process</NavLink>
-                <NavLink href="#portfolio">Portfolio</NavLink>
-                <NavLink href="#contact">Contact</NavLink>
+                {navLinks.map((link, index) => (
+                  <NavLink key={index} href={link.href}>{link.label}</NavLink>
+                ))}
               </motion.div>
             </NavLinks>
             <Button
@@ -427,41 +433,18 @@ function App() {
           >
             <CloseButton onClick={closeMobileMenu}>×</CloseButton>
             <MobileNavLinks>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              >
-                <MobileNavLink href="#home" onClick={closeMobileMenu}>Home</MobileNavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-              >
-                <MobileNavLink href="#services" onClick={closeMobileMenu}>Services</MobileNavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.3 }}
-              >
-                <MobileNavLink href="#process" onClick={closeMobileMenu}>Process</MobileNavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.4 }}
-              >
-                <MobileNavLink href="#portfolio" onClick={closeMobileMenu}>Portfolio</MobileNavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.5 }}
-              >
-                <MobileNavLink href="#contact" onClick={closeMobileMenu}>Contact</MobileNavLink>
-              </motion.div>
+              {navLinks.map((link, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                >
+                  <MobileNavLink href={link.href} onClick={closeMobileMenu}>
+                    {link.label}
+                  </MobileNavLink>
+                </motion.div>
+              ))}
             </MobileNavLinks>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

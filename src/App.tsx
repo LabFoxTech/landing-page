@@ -9,6 +9,7 @@ import WorkTogether from './components/WorkTogether';
 import Contact from './components/Contact';
 import MissionVision from './components/MissionVision';
 import ProcessIntro from './components/ProcessIntro';
+import { HeroIllustration, LabfoxLogo } from './assets';
 
 const AppContainer = styled.div`
   background-color: #000;
@@ -386,7 +387,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Logo src="/src/assets/logos/labfox-logo.svg" alt="Labfox" />
+            <Logo src={LabfoxLogo} alt="Labfox" />
           </motion.div>
           <Nav>
             <NavLinks>
@@ -504,7 +505,7 @@ function App() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <img src="/src/assets/images/hero-section.svg" alt="Hero Illustration" />
+          <img src={HeroIllustration} alt="Hero Illustration" />
         </HeroImage>
       </HeroSection>
 

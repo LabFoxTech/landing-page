@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { AssessIcon, AnalyzeIcon, ExecuteIcon } from '../assets';
 
 const ProcessSection = styled.section`
   position: relative;
@@ -149,17 +150,17 @@ const Description = styled.p`
 const Process = () => {
   const processSteps = [
     {
-      icon: '/src/assets/icons/assess.svg',
+      icon: AssessIcon,
       title: 'Assess',
       description: 'We define the strategic vision of your product alongside your team.'
     },
     {
-      icon: '/src/assets/icons/analyze.svg',
+      icon: AnalyzeIcon,
       title: 'Analyze',
       description: 'We work closely with your team to understand the time and effort our collaboration would need.'
     },
     {
-      icon: '/src/assets/icons/execute.svg',
+      icon: ExecuteIcon,
       title: 'Execute',
       description: 'Transforming your product with world-class technological expertise.'
     }

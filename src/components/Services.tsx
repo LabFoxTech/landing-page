@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
+import { ServiceIcon } from '../assets';
 
 const ServicesSection = styled.section`
   padding: 80px 0;
@@ -100,7 +101,7 @@ const ServiceCard = styled(motion.div)`
   }
 `;
 
-const ServiceIcon = styled.div`
+const ServiceIconDiv = styled.div`
   width: 48px;
   height: 48px;
   /* background: #161616;
@@ -146,22 +147,22 @@ const Services = () => {
     {
       title: 'End-to-End product co-building',
       description: 'Right from understanding your business proposition to helping you develop strategies, our team does it all for you by being an extension of your team. All you need to do is, sit back and watch your product grow!',
-      icon: '/src/assets/icons/service.svg'
+      icon: ServiceIcon
     },
     {
       title: 'Building initial BVPs and MVPs',
       description: 'Did you have a Eureka moment with an idea but don\'t know where to get started? We\'ve got you! Our team helps you in coming up with the MVPs and BVPs, with Low-Code/No-Code services (or) Native Languages and helps you build a technology-first product.',
-      icon: '/src/assets/icons/service.svg'
+      icon: ServiceIcon
     },
     {
       title: 'Continued Support through Product Lifecycle',
       description: 'We are always a text/call away anytime you need us. We have consistently skilled ourselves in problem-solving and we can guarantee to declutter and untangle all your problems with respect to your product.',
-      icon: '/src/assets/icons/service.svg'
+      icon: ServiceIcon
     },
     {
       title: 'Product consulting',
       description: 'We exist to help you in terms of what to do and where to do things and how to do them too! The LabFox team guides you through analyzing your requirements and providing optimal product solutions.',
-      icon: '/src/assets/icons/service.svg'
+      icon: ServiceIcon
     }
   ];
 
@@ -186,9 +187,9 @@ const Services = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <ServiceIcon>
+            <ServiceIconDiv>
               <img src={service.icon} alt={service.title} />
-            </ServiceIcon>
+            </ServiceIconDiv>
             <ServiceTitle>{service.title}</ServiceTitle>
             <ServiceDescription>{service.description}</ServiceDescription>
           </ServiceCard>

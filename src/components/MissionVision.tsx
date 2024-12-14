@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
+import { AssessIcon, AnalyzeIcon } from '../assets';
 
 const MissionVisionSection = styled.section`
   padding: 4rem 2rem;
@@ -172,12 +173,12 @@ const MissionVision = () => {
     {
       title: 'Our Mission',
       description: 'Be the most efficient technology enabler',
-      icon: '/src/assets/icons/mission.svg'
+      icon: AssessIcon
     },
     {
       title: 'Our Vision',
       description: 'Together, transform imagination into innovation',
-      icon: '/src/assets/icons/vision.svg'
+      icon: AnalyzeIcon
     }
   ];
 

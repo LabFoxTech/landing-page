@@ -11,7 +11,11 @@ export default defineConfig({
         plugins: ['@emotion/babel-plugin']
       }
     }),
-    svgr()
+    svgr({
+      svgrOptions: {
+        icon: true,
+      },
+    })
   ],
   resolve: {
     alias: {
@@ -24,14 +28,15 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
-          // Preserve the original asset directory structure
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
-            return `src/assets/logos/[name][extname]`;
+            return `assets/[name][extname]`;
           }
           return `assets/[name]-[hash][extname]`;
-        }
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
       }
     }
   },

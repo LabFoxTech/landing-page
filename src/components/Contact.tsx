@@ -1,5 +1,14 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { 
+  GritlyLogo, 
+  WaivLogo, 
+  TechSalesOnlyLogo, 
+  PostedLogo, 
+  GrapevineLogo, 
+  BonvoyazLogo, 
+  SarusLogo 
+} from '../assets';
 
 const ContactSection = styled.section`
   position: relative;
@@ -240,13 +249,13 @@ const CopyrightSection = styled.div`
 
 const Contact = () => {
   const clients = [
-    { name: 'Gritly', logo: '/src/assets/logos/gritly.png' },
-    { name: 'Waiv', logo: '/src/assets/logos/waiv.png' },
-    { name: 'Tech Sales Only', logo: '/src/assets/logos/techsalesonly.png' },
-    { name: 'Posted', logo: '/src/assets/logos/posted.png' },
-    { name: 'Grapevine', logo: '/src/assets/logos/grapevine.png' },
-    { name: 'Bonvoyaz', logo: '/src/assets/logos/bonvoyaz.png' },
-    { name: 'Sarus', logo: '/src/assets/logos/sarus.png' }
+    { name: 'Gritly', logo: GritlyLogo },
+    { name: 'Waiv', logo: WaivLogo },
+    { name: 'Tech Sales Only', logo: TechSalesOnlyLogo },
+    { name: 'Posted', logo: PostedLogo },
+    { name: 'Grapevine', logo: GrapevineLogo },
+    { name: 'Bonvoyaz', logo: BonvoyazLogo },
+    { name: 'Sarus', logo: SarusLogo }
   ];
 
   // Triple the clients array to ensure smooth looping

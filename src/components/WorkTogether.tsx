@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
+import { DevLabImage, DesignLabImage, HiringLabImage, GrowthLabImage } from '../assets';
 
 const WorkTogetherSection = styled.section`
   padding: 6rem 2rem;
@@ -70,22 +71,22 @@ const WorkTogether = () => {
     {
       title: 'Dev Lab',
       description: 'Our focus with the "Dev Lab" is to enlist and champion a team of expert engineers ready to build scalable products with a growth mindset. Through strategic hiring and contiguous talent reserve, we offer dynamic scaling in our development bandwidth.',
-      image: '/src/assets/images/dev.png'
+      image: DevLabImage
     },
     {
       title: 'Design Lab',
       description: 'The focus of our "Design Lab" is to hire and champion best-in-class design professionals, that can help knock out your competition, with elegant product interfaces and experiences.',
-      image: '/src/assets/images/design.png'
+      image: DesignLabImage
     },
     {
       title: 'Hiring Lab',
       description: 'Our "Hiring Lab" focuses on ensuring that our clients can scale up their teams when they need to. With a global network base of high-quality talent, we aim to fulfil our client\'s hiring requirements within days.',
-      image: '/src/assets/images/hiring.png'
+      image: HiringLabImage
     },
     {
       title: 'Growth-hack Lab',
       description: 'For our friends looking to scale up, we offer consulting services from industry-leading experts to growth hack and multiply their market capture.',
-      image: '/src/assets/images/growth.png'
+      image: GrowthLabImage
     }
   ];
 

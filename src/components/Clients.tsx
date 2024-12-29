@@ -7,7 +7,8 @@ import {
   PostedLogo, 
   GrapevineLogo, 
   BonvoyazLogo, 
-  SarusLogo 
+  SarusLogo,
+  DeltagenLogo
 } from '../assets';
 
 const ContactSection = styled.section`
@@ -247,7 +248,7 @@ const CopyrightSection = styled.div`
   color: #666666;
 `;
 
-const Contact = () => {
+const Clients = () => {
   const clients = [
     { name: 'Gritly', logo: GritlyLogo },
     { name: 'Waiv', logo: WaivLogo },
@@ -255,7 +256,8 @@ const Contact = () => {
     { name: 'Posted', logo: PostedLogo },
     { name: 'Grapevine', logo: GrapevineLogo },
     { name: 'Bonvoyaz', logo: BonvoyazLogo },
-    { name: 'Sarus', logo: SarusLogo }
+    { name: 'Sarus', logo: SarusLogo },
+    { name: 'Deltagen', logo: DeltagenLogo }
   ];
 
   // Triple the clients array to ensure smooth looping
@@ -264,32 +266,38 @@ const Contact = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <>
-      <ContactSection id="contact">
-        <ContactCard
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <GradientGlow />
-          <TopDivider />
-          <BottomDivider />
-          <DecorativeLines />
-          <GradientLines />
-          <Title>Let's talk</Title>
-          <Subtitle>Reach us at</Subtitle>
-          <EmailLink href="mailto:contact@labfox.studio">
-            contact@labfox.studio
-          </EmailLink>
-        </ContactCard>
-      </ContactSection>
-
-      <CopyrightSection>
-        © {currentYear} labfox.studio All rights reserved.
-      </CopyrightSection>
-    </>
+      <ClientsSection id="portfolio">
+        <ClientsTitle>Our Clients</ClientsTitle>
+        <ScrollContainer>
+          <ScrollTrack
+            animate={{
+              x: [`0%`, `-${(100 / 3)}%`],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 25,
+                ease: "linear",
+              },
+            }}
+            style={{
+              width: `${duplicatedClients.length * 280}px`,
+            }}
+          >
+            {duplicatedClients.map((client, index) => (
+              <LogoWrapper key={`${client.name}-${index}`}>
+                <ClientLogo
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  whileHover={{ scale: 1.05 }}
+                />
+              </LogoWrapper>
+            ))}
+          </ScrollTrack>
+        </ScrollContainer>
+      </ClientsSection>
   );
 };
 
-export default Contact; 
+export default Clients; 

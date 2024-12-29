@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import MissionVision from './components/MissionVision';
 import ProcessIntro from './components/ProcessIntro';
 import { HeroIllustration, LabfoxLogo } from './assets';
+import Clients from './components/Clients';
 
 const AppContainer = styled.div`
   background-color: #000;
@@ -491,6 +492,8 @@ function App() {
           <img src={HeroIllustration} alt="Hero Illustration" />
         </HeroImage>
       </HeroSection>
+
+      <Clients />
 
       <div style={{ height: '100px' }} />
       <MissionVision />

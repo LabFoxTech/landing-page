@@ -7,6 +7,7 @@ export { default as WaivLogo } from './logos/waiv.png';
 export { default as TechSalesOnlyLogo } from './logos/techsalesonly.png';
 export { default as GrapevineLogo } from './logos/grapevine.png';
 export { default as PostedLogo } from './logos/posted.png';
+export { default as DeltagenLogo } from './logos/deltagen.png';
 
 // Images
 export { default as HeroIllustration } from './images/hero-section.svg';

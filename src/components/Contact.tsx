@@ -279,8 +279,8 @@ const Contact = () => {
           <GradientLines />
           <Title>Let's talk</Title>
           <Subtitle>Reach us at</Subtitle>
-          <EmailLink href="mailto:contact@labfox.studio">
-            contact@labfox.studio
+          <EmailLink href="mailto:founders@labfox.studio">
+            founders@labfox.studio
           </EmailLink>
         </ContactCard>
       </ContactSection>

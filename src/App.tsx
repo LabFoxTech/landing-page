@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styled from '@emotion/styled';
 import Services from './components/Services';
@@ -368,6 +368,8 @@ const CloseButton = styled.button`
   }
 `;
 
+const CALENDLY_URL = 'https://calendly.com/d/cqnk-y8m-2t4/quick-catchup';
+
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -378,6 +380,10 @@ function App() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
+
+  const handleBookCall = useCallback(() => {
+    window.open(CALENDLY_URL, '_blank');
+  }, []);
 
   const navLinks = [
     { href: "./", label: "Home" },
@@ -414,6 +420,7 @@ function App() {
             <Button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={handleBookCall}
             >
               Book a call
             </Button>
@@ -455,7 +462,7 @@ function App() {
               <Button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={closeMobileMenu}
+                onClick={handleBookCall}
               >
                 Book a call
               </Button>
@@ -480,6 +487,7 @@ function App() {
           <Button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleBookCall}
           >
             Book a call
           </Button>
